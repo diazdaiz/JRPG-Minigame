@@ -6,26 +6,30 @@ public class CameraManager : MonoBehaviour {
             return targetPosition;
         }
         set {
-            Rule = CameraRule.Custom;
+            Rule = CameraRule.TargetPosition;
             targetPosition = value;
         }
     }
-    Vector2 targetPosition;
     public CameraRule Rule { get; set; }
-    public enum CameraRule { Custom, Roam, Cutscene, Combat }
+    public CameraMovement Movement { get; set; }
+    public float CameraSpeedMultiplier { get; set; } = 6;
+
+    Vector2 targetPosition;
+    public enum CameraRule { TargetPosition, FollowCharacter, Cutscene, Combat }
+    public enum CameraMovement { SlowedTowardTarget, Linear }
 
     [SerializeField] Character character;
 
     void Start() {
-        Rule = CameraRule.Roam;
+        Rule = CameraRule.FollowCharacter;
     }
 
     void Update() {
         Vector3 target = new();
-        if (Rule == CameraRule.Custom) {
+        if (Rule == CameraRule.TargetPosition) {
             target = new Vector3(TargetPosition.x, TargetPosition.y, -10);
         }
-        if (Rule == CameraRule.Roam) {
+        if (Rule == CameraRule.FollowCharacter) {
             Vector2 pos = character.transform.position;
             target = new Vector3(pos.x, pos.y, -10);
         }
@@ -36,9 +40,16 @@ public class CameraManager : MonoBehaviour {
             //...
         }
 
-        float speed = (target - transform.position).magnitude * 7;
+        float speed = 0;
+        if (Movement == CameraMovement.SlowedTowardTarget) {
+            speed = Mathf.Pow((target - transform.position).magnitude, 0.6f) * CameraSpeedMultiplier;
+        }
+        else if (Movement == CameraMovement.Linear) {
+            speed = CameraSpeedMultiplier;
+        }
         if (speed == 0) return;
-        Vector3 direction = (target - transform.position).normalized;
-        transform.position += direction * speed * Time.deltaTime;
+        //Vector3 direction = (target - transform.position).normalized;
+        //transform.position += direction * speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 }

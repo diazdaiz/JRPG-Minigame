@@ -1,23 +1,33 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class AdventureManager : MonoBehaviour {
-    public static AdventureManager Instance; //bukan singleton, temporary aja biar mudah di akses
-    public ExplorationState State { get; private set; }
-    public enum ExplorationState { Roam, Cutscene, Combat }
+    public static AdventureManager Instance { get; private set; } //bukan singleton, temporary aja biar mudah di akses
+    public AdventureState State { get; private set; }
+    public GameObject PortalssObjectsContainer => portalssObjectsContainer;
 
-    Dictionary<ExplorationState, GameObject> statesGameobject = new();
+    [SerializeField] GameObject portalssObjectsContainer;
+    [SerializeField] List<StateManager> statesManager = new();
 
-    public void ChangeState(ExplorationState state) {
+    [Serializable]
+    public class StateManager {
+        public AdventureState state;
+        public GameObject gameObject;
+    }
+    public enum AdventureState { Roam, Cutscene, Combat }
+
+    public void ChangeState(AdventureState state) {
         if (State == state) return;
         State = state;
-        foreach (ExplorationState _state in statesGameobject.Keys) {
-            GameObject stateGameobject = statesGameobject[_state];
-            if (_state == State) {
-                stateGameobject.SetActive(true);
+        for (int i = 0; i < statesManager.Count; i++) {
+            GameObject stateManagerGameobject = statesManager[i].gameObject;
+            AdventureState stateManagerState = statesManager[i].state;
+            if (stateManagerState == State) {
+                stateManagerGameobject.SetActive(true);
             }
             else {
-                stateGameobject.SetActive(false);
+                stateManagerGameobject.SetActive(false);
             }
         }
     }
@@ -30,7 +40,7 @@ public class AdventureManager : MonoBehaviour {
     }
 
     private void Start() {
-        ChangeState(ExplorationState.Roam);
+        ChangeState(AdventureState.Roam);
     }
 
     void Update() {

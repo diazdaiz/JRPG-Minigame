@@ -16,5 +16,5 @@ AssetOrigin:
   productId: 129996
   packageName: NaughtyAttributes
   packageVersion: 2.1.5
-  assetPath: Assets/NaughtyAttributes/Scripts/Test/TestNaughtyComponent.cs
+  assetPath: Assets/Extensions/NaughtyAttributes/Scripts/Test/TestNaughtyComponent.cs
   uploadId: 897264

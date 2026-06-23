@@ -10,5 +10,5 @@ AssetOrigin:
   productId: 129996
   packageName: NaughtyAttributes
   packageVersion: 2.1.5
-  assetPath: Assets/NaughtyAttributes/Scripts/Core/NaughtyAttributes.Core.asmdef
+  assetPath: Assets/Extensions/NaughtyAttributes/Scripts/Core/NaughtyAttributes.Core.asmdef
   uploadId: 897264

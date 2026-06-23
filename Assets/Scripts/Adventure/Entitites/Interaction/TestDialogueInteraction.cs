@@ -7,11 +7,11 @@ public class TestDialogueInteraction : MonoBehaviour, Interactable {
 
     public void Interact(GameObject interactor) {
         Debug.Log(Adventure);
-        Adventure.ChangeState(AdventureManager.ExplorationState.Cutscene);
+        Adventure.ChangeState(AdventureManager.AdventureState.Cutscene);
         flowchart.ExecuteBlock("Introduction");
     }
 
     public void EndInteraction() {
-        Adventure.ChangeState(AdventureManager.ExplorationState.Roam);
+        Adventure.ChangeState(AdventureManager.AdventureState.Roam);
     }
 }
