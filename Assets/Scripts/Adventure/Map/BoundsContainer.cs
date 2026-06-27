@@ -19,4 +19,9 @@ public class BoundsContainer : MonoBehaviour {
             if (child.childCount > 0) GetSpriteRenderers(child);
         }
     }
+
+    private void Start() {
+        setVisible = false;
+        GetSpriteRenderers(transform);
+    }
 }

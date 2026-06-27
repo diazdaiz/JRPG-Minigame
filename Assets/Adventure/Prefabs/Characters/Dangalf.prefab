@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &609954278944360741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4447556432313242043}
+  - component: {fileID: 7868010938567969441}
+  m_Layer: 0
+  m_Name: Dangalf (Fungus)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4447556432313242043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609954278944360741}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.862775, y: 18.62246, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6036494010279634559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7868010938567969441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609954278944360741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Dangalf
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 68c6e7ff398b4144287f8963248a8703, type: 3}
+  - {fileID: 21300000, guid: d1a3b36ea91794b4cbc21256b33adc4d, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!1 &6976405753397521593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2254476713791045034}
+  - component: {fileID: 3945051995084125289}
+  m_Layer: 0
+  m_Name: Dangalf (Unintroduced) (Fungus)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2254476713791045034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976405753397521593}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.862775, y: 18.62246, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6036494010279634559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3945051995084125289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6976405753397521593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: '?'
+  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  soundEffect: {fileID: 0}
+  portraits:
+  - {fileID: 21300000, guid: 68c6e7ff398b4144287f8963248a8703, type: 3}
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!1001 &6216572649754673771
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 458677421126065767, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: combat
+      value: 
+      objectReference: {fileID: 4358238535992274034}
+    - target: {fileID: 458677421126065767, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1640103095152349364}
+    - target: {fileID: 4781178577441494469, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_Name
+      value: Dangalf
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -37.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725388240521505616, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 396418689172562964, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4447556432313242043}
+    - targetCorrespondingSourceObject: {fileID: 396418689172562964, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2254476713791045034}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2996546742103913287, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1640103095152349364}
+    - targetCorrespondingSourceObject: {fileID: 4257865900178512212, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4358238535992274034}
+  m_SourcePrefab: {fileID: 100100000, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+--- !u!4 &6036494010279634559 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 396418689172562964, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+  m_PrefabInstance: {fileID: 6216572649754673771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7877721096767331135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4257865900178512212, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+  m_PrefabInstance: {fileID: 6216572649754673771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4358238535992274034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877721096767331135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284d7794c89a8364eadc52a1aa7fc441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterCombat
+--- !u!1 &9209980543288766764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2996546742103913287, guid: a5f2fcd11e2505a4587dff55c5dfaa42, type: 3}
+  m_PrefabInstance: {fileID: 6216572649754673771}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1640103095152349364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209980543288766764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0b928ea0df4b84d9577d0065cc54f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterInventory

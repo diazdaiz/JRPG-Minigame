@@ -69,7 +69,6 @@ public class PlayerCharacterController : MonoBehaviour {
 
     void InteractionControl() {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log("try interacting");
             interaction.Interact();
         }
     }

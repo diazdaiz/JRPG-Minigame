@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public class CharacterAnimation : MonoBehaviour {
+    //Temporary, bisa diimprove belakangan
     CharacterMovement movement => character.Movement;
     SpriteRenderer spriteRenderer;
     [SerializeField] Character character;

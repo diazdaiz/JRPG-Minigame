@@ -13,9 +13,17 @@ public class CameraManager : MonoBehaviour {
     public CameraRule Rule { get; set; }
     public CameraMovement Movement { get; set; }
     public float CameraSpeedMultiplier { get; set; } = 6;
+    public Character Character {
+        get {
+            return character;
+        }
+        set {
+            character = value;
+        }
+    }
 
     Vector2 targetPosition;
-    public enum CameraRule { TargetPosition, FollowCharacter, Cutscene, Combat }
+    public enum CameraRule { TargetPosition, FollowCharacter, Combat }
     public enum CameraMovement { SlowedTowardTarget, Linear }
 
     [SerializeField] Character character;
@@ -32,9 +40,6 @@ public class CameraManager : MonoBehaviour {
         if (Rule == CameraRule.FollowCharacter) {
             Vector2 pos = character.transform.position;
             target = new Vector3(pos.x, pos.y, -10);
-        }
-        if (Rule == CameraRule.Cutscene) {
-            //...
         }
         if (Rule == CameraRule.Combat) {
             //...

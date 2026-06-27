@@ -16,6 +16,9 @@ namespace FungusCommandExtension {
         [AllowNesting][ShowIf(nameof(rule), CameraManager.CameraRule.TargetPosition)] public Vector2 targetPosition;
         [AllowNesting][ShowIf(nameof(rule), CameraManager.CameraRule.TargetPosition)] public float finishedWhenDistanceLessThen = 3;
 
+        [AllowNesting][ShowIf(nameof(rule), CameraManager.CameraRule.FollowCharacter)] public Character character;
+
+
         public override void OnEnter() {
             Camera.Movement = movement;
             Camera.CameraSpeedMultiplier = CameraSpeed;
@@ -28,6 +31,16 @@ namespace FungusCommandExtension {
                 else {
                     Continue();
                 }
+            }
+            else if (Camera.Rule == CameraManager.CameraRule.FollowCharacter) {
+                Camera.Character = character;
+                if (waitUntilFinished) {
+                    StartCoroutine(CheckForMovement());
+                }
+                else {
+                    Continue();
+                }
+                Continue();
             }
             else {
                 Continue();

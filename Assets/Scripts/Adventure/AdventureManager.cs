@@ -19,17 +19,17 @@ public class AdventureManager : MonoBehaviour {
 
     public void ChangeState(AdventureState state) {
         if (State == state) return;
-        State = state;
         for (int i = 0; i < statesManager.Count; i++) {
             GameObject stateManagerGameobject = statesManager[i].gameObject;
             AdventureState stateManagerState = statesManager[i].state;
-            if (stateManagerState == State) {
+            if (stateManagerState == state) {
                 stateManagerGameobject.SetActive(true);
             }
             else {
                 stateManagerGameobject.SetActive(false);
             }
         }
+        State = state;
     }
 
     private void Awake() {
@@ -40,10 +40,7 @@ public class AdventureManager : MonoBehaviour {
     }
 
     private void Start() {
-        ChangeState(AdventureState.Roam);
-    }
-
-    void Update() {
-
+        State = AdventureState.Roam;
+        ChangeState(AdventureState.Cutscene);
     }
 }

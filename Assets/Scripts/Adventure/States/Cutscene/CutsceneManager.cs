@@ -1,11 +1,22 @@
 using UnityEngine;
 
 public class CutsceneManager : MonoBehaviour {
-    void Start() {
+    AdventureManager Adventure => AdventureManager.Instance;
+    AdventureManager.AdventureState previousState;
 
+    bool checkForCutsceneEnding;
+
+    private void OnEnable() {
+        previousState = Adventure.State;
+        checkForCutsceneEnding = true;
     }
 
-    void Update() {
-
+    private void Update() {
+        if (checkForCutsceneEnding) {
+            if (StoryManager.Instance.Flowchart.GetExecutingBlocks().Count <= 0) {
+                Adventure.ChangeState(previousState);
+                checkForCutsceneEnding = false;
+            }
+        }
     }
 }
