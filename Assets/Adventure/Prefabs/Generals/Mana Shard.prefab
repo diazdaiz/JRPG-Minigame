@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3351881144769109148}
   - component: {fileID: 8644735727854141780}
+  - component: {fileID: 3699930946344915570}
   m_Layer: 0
   m_Name: Mana Shard
   m_TagString: Untagged
@@ -91,3 +92,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &3699930946344915570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349376587468609805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c7d8b7e2efbaac40b7dc2596ff49fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ManaShard

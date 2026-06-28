@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8642544522028464491}
   - component: {fileID: 7014810882636770917}
+  - component: {fileID: 4801818636248108820}
   m_Layer: 0
   m_Name: Regular Log
   m_TagString: Untagged
@@ -91,3 +92,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4801818636248108820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273408429123749436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aedefe26a45f21646bd287d9e3a95817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item

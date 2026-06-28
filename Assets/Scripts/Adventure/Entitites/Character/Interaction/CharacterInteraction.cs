@@ -11,6 +11,7 @@ public class CharacterInteraction : InteractableObject {
     [SerializeField] Collider2D interactingArea;
     [SerializeField] Collider2D interactedArea;
     Block block;
+    AdventureManager.AdventureState previousAdventureState;
 
     /// <summary>
     /// Menginteraksi
@@ -37,6 +38,7 @@ public class CharacterInteraction : InteractableObject {
                 block = Flowchart != null ? Flowchart.FindBlock(interaction.BlockName) : null;
                 Adventure.ChangeState(AdventureManager.AdventureState.Cutscene);
                 Flowchart.ExecuteBlock(block);
+                previousAdventureState = Adventure.State;
                 StartCoroutine(CheckForCutsceneEnding());
             }
             else if (interaction.Type == Interaction.InteractionType.Collect) {
@@ -48,11 +50,11 @@ public class CharacterInteraction : InteractableObject {
                 }
                 else if (interaction.CollectInteractionType == Interaction.CollectType.Chop) {
                     Item item = interaction.CollactableItem;
-                    character.UseItem(typeof(Axe), parentObject);
+                    character.UseItem(typeof(Axe), closestInteractable);
                 }
                 else if (interaction.CollectInteractionType == Interaction.CollectType.Mine) {
                     Item item = interaction.CollactableItem;
-                    character.UseItem(typeof(Pickaxe), parentObject);
+                    character.UseItem(typeof(Pickaxe), closestInteractable);
                 }
             }
             else if (interaction.Type == Interaction.InteractionType.EnterPortal) {
@@ -66,7 +68,7 @@ public class CharacterInteraction : InteractableObject {
         while (block.IsExecuting()) {
             yield return null;
         }
-        Adventure.ChangeState(AdventureManager.AdventureState.Roam);
+        Adventure.ChangeState(previousAdventureState);
     }
 
     void Update() {

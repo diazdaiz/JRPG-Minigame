@@ -8,7 +8,9 @@ public class AdventureManager : MonoBehaviour {
     public GameObject PortalssObjectsContainer => portalssObjectsContainer;
 
     [SerializeField] GameObject portalssObjectsContainer;
+    [SerializeField] CombatManager combat;
     [SerializeField] List<StateManager> statesManager = new();
+
 
     [Serializable]
     public class StateManager {
@@ -32,6 +34,11 @@ public class AdventureManager : MonoBehaviour {
         State = state;
     }
 
+    public void InitiateCombat() {
+        ChangeState(AdventureState.Combat);
+        combat.Begin();
+    }
+
     private void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -42,5 +49,6 @@ public class AdventureManager : MonoBehaviour {
     private void Start() {
         State = AdventureState.Roam;
         ChangeState(AdventureState.Cutscene);
+        //InitiateCombat();
     }
 }

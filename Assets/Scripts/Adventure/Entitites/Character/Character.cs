@@ -22,8 +22,10 @@ public class Character : MonoBehaviour {
     }
 
     public void GiveItem(Item item, Character character) {
+        Debug.Log(Inventory.Items.Contains(item));
         if (Inventory.Items.Contains(item)) {
             character.ReceiveItem(item);
+            Inventory.Items.Remove(item);
         }
     }
 
@@ -39,15 +41,25 @@ public class Character : MonoBehaviour {
         Inventory.Items.Remove(item);
     }
 
-    public void UseItem(Item item, GameObject on) {
+    public void UseItem(Item item, InteractableObject on) {
         item.Use(on);
     }
 
-    public void UseItem(Type itemType, GameObject on) {
+    public void UseItem(Type itemType, InteractableObject on) {
         for (int i = 0; i < Inventory.Items.Count; i++) {
             Item item = Inventory.Items[i];
             if (item.GetType() == itemType) {
                 item.Use(on);
+                return;
+            }
+        }
+    }
+
+    public void EquipItem(Type itemType) {
+        for (int i = 0; i < Inventory.Items.Count; i++) {
+            Item item = Inventory.Items[i];
+            if (item.GetType() == itemType) {
+                inventory.equippedItem = item;
                 return;
             }
         }
@@ -66,5 +78,9 @@ public class Character : MonoBehaviour {
     /// </summary>
     public void Interact(GameObject interactor) {
         Interaction.Interact(interactor);
+    }
+
+    public void EquipStaff() {
+        EquipItem(typeof(MagicalStaff));
     }
 }

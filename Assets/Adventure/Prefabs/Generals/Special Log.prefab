@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4500192072398398228}
   - component: {fileID: 6783933129481806790}
+  - component: {fileID: -1328210565681592453}
   m_Layer: 0
   m_Name: Special Log
   m_TagString: Untagged
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -1419259163969335966, guid: c4a0d04b3092e7842abf3b63a9fe67c3, type: 3}
-  m_Color: {r: 0.64705884, g: 1, b: 0.88712287, a: 1}
+  m_Color: {r: 0.26226407, g: 0.60751003, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -91,3 +92,15 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &-1328210565681592453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9006428910881106621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43b274a47646704cb35d040fb66cebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpecialLog

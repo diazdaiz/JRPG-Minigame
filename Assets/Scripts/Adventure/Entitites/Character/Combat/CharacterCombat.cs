@@ -1,16 +1,13 @@
 using UnityEngine;
 
-public class CharacterCombat : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+public class CharacterCombat : MonoBehaviour {
+    public float HealthPoint {
+        get {
+            return healthPoint;
+        }
+        set {
+            healthPoint = Mathf.Clamp(value, 0f, 100f);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] float healthPoint = 100;
 }
