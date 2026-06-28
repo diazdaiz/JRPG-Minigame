@@ -9,6 +9,7 @@ public class CharacterInventory : MonoBehaviour {
         Items = new();
         for (int i = 0; i < transform.childCount; i++) {
             Item item = transform.GetChild(i).GetComponent<Item>();
+            Debug.Log(item);
             if (item != null) {
                 Items.Add(item);
             }
